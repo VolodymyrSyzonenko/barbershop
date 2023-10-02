@@ -1,0 +1,22 @@
+/* @font-face {
+    font-family: Font-700;
+    src: url(../css/fonts/Open_Sans/static/OpenSans-Bold.ttf);
+} */
+body {
+    font-family: "Open Sans", Verdana, sans-serif;
+}
+/* Header  */
+.header {
+    background-color: grey;
+}
+/* .nav-list {}
+
+.nav-item {} */
+
+.nav-link {
+        font-weight: 600;
+        line-height: 1.33;
+        letter-spacing: 0.1em;
+        text-align: left;
+        color: #FFFFFF;
+}
