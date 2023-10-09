@@ -9,6 +9,9 @@
 
   --main-btn-color: #ffffff;
   --secondary-btn-color: #303030;
+
+  --indent: 30px;
+  --items: 3;
 }
 
 body {
@@ -50,10 +53,7 @@ img {
   background-color: var(--accent-color);
   color: var(--main-btn-color);
 }
-.section {
-padding-top: 120px;
-padding-bottom: 120px;
-}
+
 .container {
   width: 1200px;
   padding-right: 15px;
@@ -64,6 +64,8 @@ padding-bottom: 120px;
   outline: 2px solid red;
   outline-offset: -2px;
 }
+
+/* Titles */
 .title {
   margin-bottom: 20px;
   color: var(--upper-title-color);
@@ -107,26 +109,70 @@ padding-bottom: 120px;
   margin-bottom:20px;
   height: 60px;
   font-size: 18px;
-  line-height: normal;
-  letter-spacing: 0.02em;
+  font-style: normal;
+  line-height: calc(30/18);
+  letter-spacing: 0.36px;
   color: var(--under-title-color);
 }
 
+/* Others */
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.card-set-item {
+  flex-basis: calc((100% - var(--indent) * var(--items) - 1)) / var(--items);
+}
 /* Header */
+
 .header {
   background-color: var(--background-color);
 }
-.header-tel {
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-link{
+  margin-right: 132px;
+}
+
+.header-nav {
+  margin-right: auto;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+  gap: var(--indent);
+}
+.header-contact,
+.header-nav-link {
+  display: block;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 1.33;
-  letter-spacing: 0.1em;
+  letter-spacing: 1.2px;
   text-align: left;
   color: var(--main-title-color);
 }
-.header-tel:hover {
+
+.header-nav-link:hover,
+.header-nav-link:focus,
+.header-contact:hover,
+.header-contact:hover {
   color: var(--accent-color);
 }
-
 .header-btn {
   color: var(--main-title-color);
   background-color: transparent;
@@ -136,21 +182,11 @@ padding-bottom: 120px;
 .header-btn:focus {
   border-color: var(--accent-color);
 }
-/* .nav-list {}
 
-.nav-item {} */
-
-.nav-link {
-  font-weight: 600;
-  line-height: 1.33;
-  letter-spacing: 0.1em;
-  text-align: left;
-  color: var(--main-title-color);
-}
-
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--accent-color);
+.header-group {
+  display:flex;
+  align-items: center;
+  gap: 43px;
 }
 /* --------HEADER--------- */
 
@@ -176,8 +212,18 @@ padding-bottom: 120px;
   width: 360px;
 }
 /* ---------ABOUT--------- */
+.about-container {
+  display: flex;
+}
+.about-list {
+  display: flex;
+  margin-right: 30px;
+}
 
-/* .about-list {} */
+.about-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .about-right-side {
   width: 470px;
 }
@@ -191,10 +237,133 @@ padding-bottom: 120px;
   letter-spacing: 0.36px;
 }
 
+/* Price */
 .price {
 background: var(--background-color)
 } 
-.contacts-group {
-    background-color: var(--background-color)
+
+.price-block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 44px;
 }
 
+.price-list {
+flex-basis: 570px;
+padding: 30px 20px;
+}
+.line {
+  display: block;
+  flex-grow: 1;
+  height: 1px;
+  margin-left: 12px;
+  margin-right: 12px;
+  background-color: rgba(157, 164, 189, 0.12);;
+}
+.price-item {
+    display: flex;
+    align-items: baseline;
+    font-family: 'Open Sans';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: calc(30/18);
+    letter-spacing: 0.36px;
+    color: var(--upper-title-color-theme-dark);
+}
+.price-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.price-btn {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Benefits */
+
+
+/* Team */
+
+.team {
+  background-color: #f7f7f7;
+}
+
+.team-name {
+  margin-bottom: 8px;
+    color: var(--upper-title-color);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: calc(25/18);
+    letter-spacing: 0.36px;
+}
+
+.team-position {
+    color: #FF6C00;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.28px;
+}
+
+.team-wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/* Gallery */
+
+
+/* Contacts */
+.contacts {
+    padding-bottom: 0;
+    background-color: var(--background-color)
+}
+.contacts-container {
+  display: flex;
+  padding-top: 130px;
+}
+.booking {
+  margin-left: 204px;
+}
+.contacts-group {
+  display: block;
+  margin-left: 105px;
+}
+
+.contact-item:not(:last-child) {
+margin-bottom: 20px;
+}
+
+.contact-item {
+  width: 230px;
+  padding: auto;
+}
+.contact-work {
+  text-align: center;
+  margin-top: 70px;
+  color: var(--main-title-color);
+}
+.contact {
+  font-weight: 700;
+}
+.contact-text {
+  height: auto;
+  margin-bottom: 110px;
+}
+.footer {
+  padding-top: 56px;
+}
+.footer-container {
+  display: flex;
+  align-items: center;
+}
+.footer-list {
+  display: flex;
+  align-items: center;
+}
+.footer-item {
+  padding: 0;
+  margin-left: 40px;
+}
