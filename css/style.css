@@ -409,6 +409,7 @@ align-items: flex-end;
   display: flex;
   justify-content: space-between;
   margin-bottom: 44px;
+  gap: 30px;
 }
 
 .price-list {
@@ -469,8 +470,9 @@ align-items: flex-end;
 
 .benefits-container {
   display: flex;
-  gap: 30px;
+  /* gap: 30px; */
 }
+
 .benefits-left-side {
  width: 50%;
 }
@@ -486,8 +488,8 @@ align-items: flex-end;
 
 .benefits-item {
   text-align: center;
-  width: 170px;
-  min-height: 133px;
+  /* width: 170px;
+  min-height: 133px; */
   padding: 20px 24px;
   background-color: #f7f7f7;
 }
@@ -505,6 +507,7 @@ align-items: flex-end;
   line-height: calc(57 / 42);
   text-align: center;
   letter-spacing: 0.05em;
+  margin-bottom: 6px;
 }
 
 .benefits-quantity:after {
@@ -524,10 +527,17 @@ align-items: flex-end;
 
 .benefits-text {
   font-family: 'Open Sans';
-    font-size: 11px;
-    font-weight: 600;
-    line-height: calc(15 / 11);
-    text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: calc(15 / 11);
+  text-align: center;
+
+  margin: 0 auto;
+  max-width: 122px;
+}
+
+.benefits-item > .benefits-right-side {
+  margin-right: 130px;
 }
 
 .benefits-right-side {
@@ -641,6 +651,10 @@ align-items: flex-end;
 .contacts-icon {
   margin-right: 16px;
   fill: currentColor;
+}
+
+.contacts-icon:first-child {
+  margin-top: 6px;
 }
 
 .contact-item {
