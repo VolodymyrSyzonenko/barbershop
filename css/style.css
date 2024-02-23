@@ -258,9 +258,6 @@ img {
 
 
 /* ---------HERO---------- */
-/* .hero {
-  background-color: var(--background-color);
-} */
 
 .hero-container {
   display: flex;
@@ -639,7 +636,7 @@ align-items: flex-end;
 /* Gallery */
 
 /* Contacts */
-.contacts {
+.contacts-group {
   max-width: 1600px;
   margin: 0 auto;
   padding-bottom: 0;
@@ -651,22 +648,31 @@ align-items: flex-end;
 
 .contacts-container {
   display: flex;
-  gap: 30px;
-  padding-top: 130px;
+  justify-content: space-between;
+  row-gap: 30px;
 }
 
+.contacts,
 .booking {
-  margin-left: 204px;
+  width: 570px;
 }
 
-.contacts-group {
-  display: block;
-  margin-left: 105px;
+.contacts-title {
+  font-family: 'Raleway';
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: calc(49/42);
+    letter-spacing: 2.1px;
+    margin-bottom: 40px;
+}
+
+.contacts {
+  padding-left: 100px;
 }
 
 .adress {
   display: flex;
-  gap: 16px;
   font-weight: 700;
   color: var(--under-tittle-color-theme-dark);
 }
@@ -678,6 +684,7 @@ align-items: flex-end;
   height: auto;
   margin-right: 16px;
 }
+
 
 .contact-item:not(:last-child) {
   margin-bottom: 20px;
@@ -697,15 +704,32 @@ align-items: flex-end;
   padding: auto;
 }
 
+.contact-work::before {
+  margin-right: 20px;
+  content: "";
+  width: 60px;
+  height: 1px;
+  background: rgba(157, 164, 189, 0.40);
+}
+
 .contact-work {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  text-transform: uppercase;
+  color: var(--main-title-color);
+
   text-align: center;
   margin-top: 70px;
-  color: var(--main-title-color);
+
 }
 
 .contact-text {
+  margin: 0;
   height: auto;
-  margin-bottom: 110px;
   color: var(--under-tittle-color-theme-dark);
 }
 
@@ -825,9 +849,10 @@ align-items: flex-end;
 .modal-icon {
   fill: rgba(0, 0, 0, 1);
 }
+
 /* 
 ==========
-Animations
+ANIMATIONS
 ========== */
 @keyframes top-to-bottom {
   0% {
@@ -874,4 +899,18 @@ Animations
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/*===========
+FORM
+=============*/
+form {
+  color: rgba(157, 164, 189, 0.40);
+  /* font-family: "Open Sans";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: calc(15/11);
+  letter-spacing: 1.1px;
+  text-transform: uppercase; */
 }
