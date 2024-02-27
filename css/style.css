@@ -19,7 +19,7 @@
 
 html {
   scroll-behavior: smooth;
-} 
+}
 
 body {
   font-family: "Open Sans", Verdana, sans-serif;
@@ -55,7 +55,7 @@ img {
   min-width: 160px;
 
   padding: 11px 19px;
-  
+
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
@@ -224,11 +224,11 @@ img {
   letter-spacing: 1.2px;
   text-align: left;
   color: var(--main-title-color);
-  transition: color ;
+  transition: color;
 
-  
+
   transition: color var(--anim-slow);
-  
+
 }
 
 .header-nav-link:hover,
@@ -264,9 +264,9 @@ img {
 }
 
 .hero-left-side {
-width: 100px;
-display: flex;
-align-items: flex-end;
+  width: 100px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .hero-right-side {
@@ -276,7 +276,8 @@ align-items: flex-end;
   padding-bottom: 208px;
   padding-left: 100px;
 
-  background-color:rgba(25, 28, 38, 0.20);;
+  background-color: rgba(25, 28, 38, 0.20);
+  ;
   background-image: url(../images/header/slider-img3.jpeg);
   background-size: cover;
   background-position: center;
@@ -296,7 +297,7 @@ align-items: flex-end;
   height: 1px;
 
   background-color: var(--secondary-btn-color);
-} 
+}
 
 .media-link {
   color: var(--upper-title-color);
@@ -313,10 +314,12 @@ align-items: flex-end;
 .media-link:focus {
   color: var(--accent-color);
 }
+
 .hero-uppertitle {
   animation: top-to-bottom 1s ease 200ms both;
 }
-.hero-title { 
+
+.hero-title {
   animation: left-to-right 2s ease 1200ms both;
 }
 
@@ -329,7 +332,7 @@ align-items: flex-end;
   font-weight: 400;
   line-height: 30px;
   letter-spacing: 0.36px;
-  
+
   animation: bottom-to-top 2s ease 2200ms both;
 }
 
@@ -352,8 +355,9 @@ align-items: flex-end;
 
 .slider-pagination-item.active {
   width: 18px;
-  background-color:  #ffffff;
+  background-color: #ffffff;
 }
+
 .slider-list {
   position: absolute;
   right: 20px;
@@ -368,14 +372,14 @@ align-items: flex-end;
   width: 60px;
   height: 24px;
   padding: 0;
-  
+
   font-weight: 600;
   font-size: 11px;
   line-height: normal;
   letter-spacing: 1.1px;
-  
+
   color: var(--main-title-color);
-  
+
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #ffffff;
@@ -393,8 +397,9 @@ align-items: flex-end;
 
 .slider-btn[disabled] {
   color: rgba(157, 164, 189, 0.6);
- border-color: rgba(157, 164, 189, 0.6);
+  border-color: rgba(157, 164, 189, 0.6);
 }
+
 /* ---------ABOUT--------- */
 .about-container {
   display: flex;
@@ -446,17 +451,15 @@ align-items: flex-end;
 }
 
 .price-list:first-child {
-  background-image: linear-gradient(
-    180deg,
-    #171a24 0%,
-    rgba(23, 26, 36, 0.2) 100%);
+  background-image: linear-gradient(180deg,
+      #171a24 0%,
+      rgba(23, 26, 36, 0.2) 100%);
 }
 
 .price-list:last-child {
-  background-image: linear-gradient(
-    180deg,
-    #090b13 0%,
-    rgba(9, 11, 19, 0.2) 100%);
+  background-image: linear-gradient(180deg,
+      #090b13 0%,
+      rgba(9, 11, 19, 0.2) 100%);
 }
 
 .price-item {
@@ -503,7 +506,7 @@ align-items: flex-end;
 }
 
 .benefits-left-side {
- width: 50%;
+  width: 50%;
 }
 
 .benefits-list {
@@ -545,7 +548,7 @@ align-items: flex-end;
   position: absolute;
   top: 7px;
   right: -15px;
-  
+
   font-weight: 600;
   font-size: 16px;
   line-height: calc(22 / 16);
@@ -565,13 +568,14 @@ align-items: flex-end;
   max-width: 122px;
 }
 
-.benefits-item > .benefits-right-side {
+.benefits-item>.benefits-right-side {
   margin-right: 130px;
 }
 
 .benefits-right-side {
   width: 500px;
 }
+
 /* Team */
 
 .team {
@@ -620,7 +624,7 @@ align-items: flex-end;
   color: rgb(48, 48, 48);
   border-radius: 50%;
   background-color: var(--main-btn-color);
-  
+
   transition: color var(--anim-slow);
 }
 
@@ -635,7 +639,100 @@ align-items: flex-end;
 
 /* Gallery */
 
-/* Contacts */
+/* Booking & Contacts */
+.booking-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 44px;
+}
+
+.booking-group-field {
+  position: relative;
+  flex-basis: 270px;
+}
+
+.booking-group-field:not(last-child) {
+  margin-right: 30px;
+}
+
+.booking-field,
+.booking-message {
+  width: 100%;
+  height: 24px;
+
+  color: var(--main-title-color);
+  outline: unset;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.40);
+  transition: border-color var(--anim-fast);
+}
+
+.booking-field:focus,
+.booking-field:focus:not(:placeholder-shown) .booking-message:focus,
+.booking-message:focus:not(:placeholder-shown) {
+  border-color: var(--main-title-color);
+}
+
+.booking-field::placeholder,
+.booking-message::placeholder {
+  opacity: 0;
+  font-style: 14px;
+  color: var(--under-tittle-color-theme-dark);
+  transition: opacity var(--anim-fast);
+}
+
+.booking-field:focus::placeholder,
+.booking-message:focus::placeholder {
+  opacity: 1;
+  transition-delay: 200ms;
+}
+
+.booking-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: calc(15/11);
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+
+  color: rgba(157, 164, 189, 0.40);
+
+  transform-origin: left;
+  transition: transform var(--anim-fast), color var(--anim-fast);
+}
+
+.booking-field:focus+.booking-label,
+.booking-field:not(:placeholder-shown)+.booking-label,
+.booking-message:focus+.booking-label,
+.booking-message:not(:placeholder-shown)+.booking-label {
+  transform: translateY(-100%) scale(0.8);
+  color: var(--main-title-color);
+}
+
+.booking-field+.booking-label::after {
+  content: '*';
+  color: var(--accent-color);
+}
+
+.booking-message {
+  height: 76px;
+
+  resize: none;
+}
+
+.btn-booking {
+  color: var(--main-title-color);
+}
+
+/* CONTACTS */
+
 .contacts-group {
   max-width: 1600px;
   margin: 0 auto;
@@ -659,12 +756,12 @@ align-items: flex-end;
 
 .contacts-title {
   font-family: 'Raleway';
-    font-size: 42px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: calc(49/42);
-    letter-spacing: 2.1px;
-    margin-bottom: 40px;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: calc(49/42);
+  letter-spacing: 2.1px;
+  margin-bottom: 40px;
 }
 
 .contacts {
@@ -783,6 +880,7 @@ align-items: flex-end;
   line-height: normal;
   letter-spacing: 2.2px;
 }
+
 /* ---Modal-window---- */
 .backdrop {
   position: fixed;
@@ -813,7 +911,8 @@ align-items: flex-end;
 
   width: 528px;
   height: 581px;
-  
+  padding: 40px;
+
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
@@ -838,7 +937,7 @@ align-items: flex-end;
 
   width: 30px;
   height: 30px;
-  
+
   background: transparent;
   border-radius: 50%;
   border: 1px solid #9da4bd;
@@ -846,10 +945,153 @@ align-items: flex-end;
   cursor: pointer;
 }
 
+.modal-icon:hover,
+.modal-icon:focus {
+  fill: var(--accent-color);
+}
+
 .modal-icon {
   fill: rgba(0, 0, 0, 1);
 }
 
+.modal-label {
+  display: block;
+  text-align: center;
+  /* margin-top: 40px; */
+  margin-bottom: 12px;
+}
+
+.modal-form-label {
+  display: block;
+
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: calc(14/12);
+  letter-spacing: 0.12px;
+  margin-bottom: 4px;
+  color: #757575;
+}
+.modal-form-group {
+  margin-bottom: 20px;
+}
+
+.modal-form-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.modal-form-field {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  padding-right: 40px;
+
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.20);
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+  transition: outline var(--anim-fast), box-shadow var(--anim-fast);
+}
+
+.modal-form-field:focus {
+  outline-color: var(--accent-color);
+  box-shadow: 0 0 0 5px rgba(255, 108, 0, 0.25);
+}
+
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+
+  transform: translateY(-50%);
+  transition: fill var(--anim-fast);
+}
+
+.modal-form-field:focus+.modal-form-icon {
+  fill: var(--accent-color);
+}
+
+.modal-form-message {
+  display: block;
+  width: 100%;
+  height: 120px;
+
+  margin-bottom: 20px;
+  resize: none;
+
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.20);
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+  transition: outline var(--anim-fast) box-shadow var(--anim-fast);
+
+
+  padding: 12px 16px;
+  color: rgba(117, 117, 117, 0.50);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: calc(14/12);
+  letter-spacing: 0.12px;
+}
+.modal-form-message:focus {
+  outline-color: var(--accent-color);
+  box-shadow: 0 0 0 4px rgba(255, 108, 0, 0.25);
+}
+.modal-form-agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  margin-bottom: 30px;
+  color: #757575;
+}
+
+.modal-form-checkbox {
+  appearance: none;
+  width: 16px;
+  height: 15px;
+
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  border-radius: 2px;
+  border: 1px solid var(--under-tittle-color-theme-dark);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.95703 7.75166L3.88825 7.68604L3.81923 7.75141L2.93123 8.59258L2.85486 8.66492L2.93097 8.73753L6.42671 12.0724L6.49574 12.1382L6.56476 12.0724L14.069 4.91352L14.1449 4.84116L14.069 4.76881L13.1873 3.92764L13.1183 3.86183L13.0493 3.92761L6.49577 10.1735L3.95703 7.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E");
+  transition: background-sizq var(--anim-fast), background-color var(--anim-fast), outline-color var(--anim-fast);
+}
+
+.modal-form-checkbox:checked {
+  outline-color: var(--accent-color);
+  background-color: var(--accent-color);
+  background-size: 16px 15px;
+}
+
+.modal-form-agreement-desc {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: calc(24/14);
+  letter-spacing: 0.42px;
+
+  user-select: none;
+}
+
+.modal-form-agreement-link {
+ color: var(--accent-color);
+ /* text-underline-position: under; */
+  text-underline-offset: 3px;
+}
+
+.modal-form-btn {
+  display: block;
+  margin: 0 auto;
+}
 /* 
 ==========
 ANIMATIONS
@@ -861,8 +1103,9 @@ ANIMATIONS
   }
 
   50% {
-    opacity: 0,6;
+    opacity: 0, 6;
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
